@@ -156,9 +156,8 @@ void chText::createFromString(const string & cstr){
 // Fills buffer with utf8-encoded c++ string
 void chText::createFromChar(const char * cstr){
     buffer.clear();
-    size_t cstrlen = strlen(cstr);
     size_t chPos = 0;
-    for(size_t i = 0; i < cstrlen; ++i){
+    for(size_t i = 0; cstr[i] != '\0'; ++i){
         string ch = \"\";
         char c = cstr[i];
         if (c >= 0 && c <= 127){
